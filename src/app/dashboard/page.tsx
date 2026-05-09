@@ -38,7 +38,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <div key="title">
-        <h1 className="text-2xl font-bold tracking-tight text-foreground">Overview</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-foreground">Home</h1>
         <p className="text-muted-foreground mt-1 text-sm">Dashboard summary for the current period.</p>
       </div>
 

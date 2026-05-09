@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { ModeToggle } from "@/components/mode-toggle"
 import { AnimatedGroup } from "@/components/ui/animated-group"
+import { GettingStartedModal } from "@/components/getting-started-modal"
 
 export default function DashboardLayout({
   children,
@@ -59,6 +60,7 @@ export default function DashboardLayout({
           >
             {children}
           </AnimatedGroup>
+          <GettingStartedModal />
         </main>
       </SidebarInset>
     </SidebarProvider>
