@@ -16,32 +16,20 @@ interface AuthLayoutProps {
 export function AuthLayout({ children, title, description }: AuthLayoutProps) {
     return (
         <div className="relative flex min-h-screen overflow-hidden">
-            {/* Background Glows (Same as Hero) */}
-            <div
-                aria-hidden
-                className="z-[0] absolute inset-0 pointer-events-none isolate opacity-50 contain-strict hidden lg:block">
-                <div className="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-            </div>
-            <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
-
-            {/* Left side: Image */}
-            <div className="relative hidden w-1/2 lg:block">
-                <div className="absolute inset-0 z-10 bg-gradient-to-l from-background to-transparent" />
-                <Image
-                    src="/auth-bg.png"
-                    alt="Auth Background"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 z-20 flex flex-col justify-end p-12 text-white">
-                    <div className="max-w-md space-y-4 rounded-2xl bg-black/20 p-8 backdrop-blur-md border border-white/10 shadow-2xl">
-                        <p className="text-xl font-medium italic leading-relaxed">
+            {/* Left side: Grid Background */}
+            <div className="relative hidden w-1/2 lg:block border-r bg-muted/30">
+                <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent)]">
+                    <div className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)]"></div>
+                </div>
+                
+                <div className="absolute inset-0 z-20 flex flex-col justify-end p-12">
+                    <div className="max-w-md space-y-4 rounded-2xl bg-background/60 p-8 backdrop-blur-md border shadow-2xl">
+                        <p className="text-xl font-medium italic leading-relaxed text-foreground">
                             &quot;The best CRM we&apos;ve ever used. It transformed our customer engagement workflow overnight.&quot;
                         </p>
                         <div>
-                            <p className="font-semibold text-lg">Sarah Jenkins</p>
-                            <p className="text-white/70">CTO at TechFlow</p>
+                            <p className="font-semibold text-lg text-foreground">Sarah Jenkins</p>
+                            <p className="text-muted-foreground">CTO at TechFlow</p>
                         </div>
                     </div>
                 </div>

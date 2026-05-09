@@ -63,13 +63,18 @@ const items = [
     url: "#",
     icon: Calendar,
   },
+  {
+    title: "Settings",
+    url: "#",
+    icon: Settings,
+  },
 ]
 
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-r bg-background/50 backdrop-blur-xl">
-      <SidebarHeader className="h-14 flex items-center justify-center border-b px-4">
-        <Link href="/dashboard" className="flex items-center gap-2">
+      <SidebarHeader className="h-14 flex items-center justify-center border-b px-4 group-data-[collapsible=icon]:px-0">
+        <Link href="/dashboard" className="flex items-center justify-center">
             <Logo className="h-4 w-auto" />
         </Link>
       </SidebarHeader>
@@ -108,16 +113,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="border-t p-4">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton render={<Link href="#" />} tooltip="Settings">
-                <Settings />
-                <span>Settings</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   )
