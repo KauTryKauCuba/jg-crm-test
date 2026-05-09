@@ -6,6 +6,8 @@ import { ArrowRight, ChevronRight, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import { ModeToggle } from '@/components/mode-toggle'
 
 const transitionVariants = {
     item: {
@@ -67,13 +69,15 @@ export function HeroSection() {
                                 },
                             } as const}
                             className="absolute inset-0 -z-20">
-                            <img
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
-                                alt="background"
-                                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-                                width="3276"
-                                height="4095"
-                            />
+                            <div className="absolute inset-0 -z-20">
+                                <Image
+                                    src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
+                                    alt="background"
+                                    className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block object-cover"
+                                    fill
+                                    priority
+                                />
+                            </div>
                         </AnimatedGroup>
                         <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
                         <div className="mx-auto max-w-7xl px-6">
@@ -164,20 +168,24 @@ export function HeroSection() {
                                     className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                                 />
                                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                                    <img
-                                        className="bg-background aspect-[15/8] relative hidden rounded-2xl dark:block"
-                                        src="https://tailark.com//_next/image?url=%2Fmail2.png&w=3840&q=75"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
-                                    <img
-                                        className="z-2 border-border/25 aspect-[15/8] relative rounded-2xl border dark:hidden"
-                                        src="https://tailark.com/_next/image?url=%2Fmail2-light.png&w=3840&q=75"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
+                                    <div className="relative aspect-[15/8] hidden dark:block">
+                                        <Image
+                                            className="bg-background rounded-2xl"
+                                            src="https://tailark.com//_next/image?url=%2Fmail2.png&w=3840&q=75"
+                                            alt="app screen dark"
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                    <div className="relative aspect-[15/8] dark:hidden">
+                                        <Image
+                                            className="z-2 border-border/25 rounded-2xl border"
+                                            src="https://tailark.com/_next/image?url=%2Fmail2-light.png&w=3840&q=75"
+                                            alt="app screen light"
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </AnimatedGroup>
@@ -195,78 +203,78 @@ export function HeroSection() {
                             </Link>
                         </div>
                         <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
+                            <div className="flex relative h-5 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/nvidia.svg"
                                     alt="Nvidia Logo"
-                                    height="20"
-                                    width="auto"
+                                    width={80}
+                                    height={20}
                                 />
                             </div>
 
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
+                            <div className="flex relative h-4 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/column.svg"
                                     alt="Column Logo"
-                                    height="16"
-                                    width="auto"
+                                    width={80}
+                                    height={16}
                                 />
                             </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
+                            <div className="flex relative h-4 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/github.svg"
                                     alt="GitHub Logo"
-                                    height="16"
-                                    width="auto"
+                                    width={80}
+                                    height={16}
                                 />
                             </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
+                            <div className="flex relative h-5 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/nike.svg"
                                     alt="Nike Logo"
-                                    height="20"
-                                    width="auto"
+                                    width={80}
+                                    height={20}
                                 />
                             </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
+                            <div className="flex relative h-5 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
                                     alt="Lemon Squeezy Logo"
-                                    height="20"
-                                    width="auto"
+                                    width={80}
+                                    height={20}
                                 />
                             </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
+                            <div className="flex relative h-4 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/laravel.svg"
                                     alt="Laravel Logo"
-                                    height="16"
-                                    width="auto"
+                                    width={80}
+                                    height={16}
                                 />
                             </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-7 w-fit dark:invert"
+                            <div className="flex relative h-7 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/lilly.svg"
                                     alt="Lilly Logo"
-                                    height="28"
-                                    width="auto"
+                                    width={80}
+                                    height={28}
                                 />
                             </div>
 
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-6 w-fit dark:invert"
+                            <div className="flex relative h-6 w-fit mx-auto">
+                                <Image
+                                    className="dark:invert object-contain"
                                     src="https://html.tailus.io/blocks/customers/openai.svg"
                                     alt="OpenAI Logo"
-                                    height="24"
-                                    width="auto"
+                                    width={80}
+                                    height={24}
                                 />
                             </div>
                         </div>
@@ -347,7 +355,8 @@ const HeroHeader = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit items-center">
+                                <ModeToggle />
                                 <Button
                                     asChild
                                     variant="outline"
