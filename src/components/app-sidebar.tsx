@@ -136,7 +136,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent className="px-0 space-y-0 overflow-x-hidden">
         <SidebarGroup className="py-2 bg-blue-600 dark:bg-blue-700 text-white group-data-[collapsible=icon]:py-2 group-data-[collapsible=icon]:px-0">
-          <SidebarGroupLabel className="text-white/70 font-bold text-[10px] uppercase tracking-[0.2em] px-4 group-data-[collapsible=icon]:hidden">Platform</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-white/70 font-semibold text-[10px] uppercase tracking-[0.2em] px-4 group-data-[collapsible=icon]:hidden">Platform</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="group-data-[collapsible=icon]:items-center px-2 group-data-[collapsible=icon]:px-0 gap-1">
               {mainItems.map((item) => (
@@ -157,7 +157,7 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup className="py-2 group-data-[collapsible=icon]:py-2 group-data-[collapsible=icon]:px-0">
-          <SidebarGroupLabel className="px-4 font-bold text-[10px] uppercase tracking-[0.2em] opacity-50 group-data-[collapsible=icon]:hidden">Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="px-4 font-semibold text-[10px] uppercase tracking-[0.2em] opacity-50 group-data-[collapsible=icon]:hidden">Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="group-data-[collapsible=icon]:items-center px-2 group-data-[collapsible=icon]:px-0 gap-1">
               {appItems.map((item) => (

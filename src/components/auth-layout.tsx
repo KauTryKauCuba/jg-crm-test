@@ -24,7 +24,7 @@ export function AuthLayout({ children, title, description }: AuthLayoutProps) {
                 
                 <div className="absolute inset-0 z-20 flex flex-col justify-end p-12">
                     <div className="max-w-md space-y-4 rounded-2xl bg-background/60 p-8 backdrop-blur-md border shadow-2xl">
-                        <p className="text-xl font-medium italic leading-relaxed text-foreground">
+                        <p className="text-xl font-semibold italic leading-relaxed text-foreground">
                             &quot;The best CRM we&apos;ve ever used. It transformed our customer engagement workflow overnight.&quot;
                         </p>
                         <div>
@@ -70,7 +70,7 @@ export function AuthLayout({ children, title, description }: AuthLayoutProps) {
                         className="mt-10"
                     >
                         <div key="header">
-                            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                            <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                                 {title}
                             </h1>
                             <p className="mt-3 text-lg text-muted-foreground">

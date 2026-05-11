@@ -64,8 +64,8 @@ export function GettingStartedModal() {
                         <div className="h-1.5 w-1.5 rounded-full bg-primary/30" />
                     </div>
                     <div className="space-y-1.5 text-center">
-                        <p className="text-lg font-bold text-foreground tracking-tight">Hi KauTryKauCuba 😊</p>
-                        <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] opacity-70">Welcome to Zoho CRM</p>
+                        <p className="text-lg font-semibold text-foreground tracking-tight">Hi KauTryKauCuba 😊</p>
+                        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.2em] opacity-70">Welcome to Zoho CRM</p>
                     </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export function GettingStartedModal() {
             {/* Right Side: Form */}
             <div className="flex-1 p-8 md:p-12 overflow-y-auto max-h-[90vh]">
               <div className="mb-10">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                <h2 className="text-2xl font-semibold tracking-tight text-foreground">
                   Getting Started with <span className="text-primary">jg crm</span>
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
@@ -172,13 +172,13 @@ export function GettingStartedModal() {
 
                   <div className="flex items-center space-x-3 pt-2">
                     <Checkbox id="sample-data" className="rounded-md border-border/50 data-[state=checked]:bg-primary" />
-                    <Label htmlFor="sample-data" className="text-sm font-medium text-muted-foreground/90 cursor-pointer select-none">
+                    <Label htmlFor="sample-data" className="text-sm font-semibold text-muted-foreground/90 cursor-pointer select-none">
                       Load Sample data
                     </Label>
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full h-12 rounded-xl text-base font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group mt-6">
+                <Button type="submit" className="w-full h-12 rounded-xl text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group mt-6">
                   Get Started
                   <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>

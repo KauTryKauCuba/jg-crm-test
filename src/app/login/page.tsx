@@ -39,7 +39,7 @@ export default function LoginPage() {
                         <Label htmlFor="password">Password</Label>
                         <Link 
                             href="#" 
-                            className="text-sm font-medium text-primary hover:underline"
+                            className="text-sm font-semibold text-primary hover:underline"
                         >
                             Forgot password?
                         </Link>
@@ -56,7 +56,7 @@ export default function LoginPage() {
                     <Checkbox id="remember" />
                     <Label 
                         htmlFor="remember" 
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
                         Remember me for 30 days
                     </Label>

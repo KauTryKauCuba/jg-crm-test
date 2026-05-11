@@ -38,7 +38,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <div key="title">
-        <h1 className="text-2xl font-bold tracking-tight text-foreground">Home</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-foreground">Home</h1>
         <p className="text-muted-foreground mt-1 text-sm">Dashboard summary for the current period.</p>
       </div>
 
@@ -46,12 +46,12 @@ export default function DashboardPage() {
         {stats.map((stat, i) => (
           <Card key={i} className="overflow-hidden border-border/50 bg-background/50 backdrop-blur-md transition-all hover:border-primary/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 pt-3">
-              <CardTitle className="text-xs font-bold uppercase tracking-wider text-muted-foreground/80">{stat.title}</CardTitle>
+              <CardTitle className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/80">{stat.title}</CardTitle>
               <stat.icon className={`h-3.5 w-3.5 ${stat.color}`} />
             </CardHeader>
             <CardContent className="pb-3">
-              <div className="text-xl font-bold">{stat.value}</div>
-              <p className="text-xs text-muted-foreground mt-0.5 font-medium">
+              <div className="text-xl font-semibold">{stat.value}</div>
+              <p className="text-xs text-muted-foreground mt-0.5 font-semibold">
                 {stat.description}
               </p>
             </CardContent>
@@ -89,14 +89,14 @@ export default function DashboardPage() {
                 { name: "William Kim", email: "will@email.com", amount: "+$99.00", initials: "WK" },
               ].map((sale, i) => (
                 <div key={i} className="flex items-center">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted font-bold text-xs">
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted font-semibold text-xs">
                     {sale.initials}
                   </div>
                   <div className="ml-3 space-y-0.5">
                     <p className="text-xs font-semibold leading-none">{sale.name}</p>
                     <p className="text-xs text-muted-foreground">{sale.email}</p>
                   </div>
-                  <div className="ml-auto text-xs font-bold">{sale.amount}</div>
+                  <div className="ml-auto text-xs font-semibold">{sale.amount}</div>
                 </div>
               ))}
             </div>

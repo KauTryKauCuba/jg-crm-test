@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
+const inter = Inter({
+  weight: ["400", "600"],
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const robotoMono = Roboto_Mono({
@@ -28,10 +29,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${robotoMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${robotoMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className={`${inter.className} min-h-full flex flex-col`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
